@@ -1,37 +1,24 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 
-/**
- * main - Program that generates random valid
- *        passwords for the program 101-crackme.
- *
- * Return: 0 (Success)
- */
 int main(void)
 {
-    int sum = 2772;
-    int n;
+  int n;
+  int a[5];
+  int *p;
 
-    srand(time(0));
-    while (sum)
-    {
-        n = rand() % 94;
-        n += 33;
-
-        while (n == 96 || n == 124)
-        {
-            n = rand() % 94;
-            n += 33;
-        }
-
-        if (sum - n >= 0)
-        {
-            sum -= n;
-            putchar(n);
-        }
-    }
-    putchar('\n');
-
-    return (0);
+  a[2] = 1024;
+  p = &n;
+  /*
+   * write your line of code here...
+   * Remember:
+   * - you are not allowed to use a
+   * - you are not allowed to modify p
+   * - only one statement
+   * - you are not allowed to code anything else than this line of code
+   */
+  *(p + 5) = 98;
+  /* ...so that this prints 98\n */
+  printf("a[2] = %d\n", a[2]);
+  return (0);
 }
+
