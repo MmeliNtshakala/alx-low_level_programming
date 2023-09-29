@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * clear_bit - clear bit to 0 at given
+ * clear_bit- clear bit to 0 at given
  * @n : number
- * @index : within binary number
+ * @index: within binary number
  *
- * Return : 1 if true, or 0 if false
+ * Return: 1 if true, or 0 if false
  */
 
 int clear_bit(unsigned long int *n, unsigned long int index)
