@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * set_bit - seet bit to 1 at index
@@ -18,5 +19,5 @@ int set_bit(unsigned long int *n, unsigned int index)
 	x <<= index;
 
 	*n = *n | x;
-	return(1);
+	return (1);
 }
