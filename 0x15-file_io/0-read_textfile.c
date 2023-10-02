@@ -21,15 +21,15 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	ret = open(filename, O_RDONLY);
 	if (ret == -1)
 		return (0);
-       hold = malloc(letters);
-       if (!hold)
-	       return (0);
-       x = read(ret, hold, letters);
-       if (x == -1)
-	       return (0);
-       n = write(STDOUT_FILENO, hold, n);
-       if (n == -1)
-	       return (0);
-       close(ret);
-       return (x);
+	hold = malloc(letters);
+	if (!hold)
+		return (0);
+	x = read(ret, hold, letters);
+	if (x == -1)
+		return (0);
+	n = write(STDOUT_FILENO, hold, n);
+	if (n == -1)
+		return (0);
+	close(ret);
+	return (x);
 }
