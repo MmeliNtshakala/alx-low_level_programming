@@ -11,7 +11,7 @@ int main(int num, char **arg)
 {
 	int res_from, res_to;
 	ssize_t x_from, x_to;
-	char *from = NULL, *to = NULL, BUFFER[1024];
+	char *from = NULL, *to = NULL, buffer[1024];
 
 	if (num != 3)
 		error(97, from, to);
@@ -50,9 +50,9 @@ int main(int num, char **arg)
  * errors - prints all errors
  * @x: exit
  * @from: filename
- * @to holds filename
+ * @to: holds filename
  */
-void erros(int x, char *from, char *to)
+void errors(int x, char *from, char *to)
 {
 	switch (x)
 	{
