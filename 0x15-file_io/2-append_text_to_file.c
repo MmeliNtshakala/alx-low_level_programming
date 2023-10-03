@@ -3,7 +3,7 @@
 /**
  * append_text_to_file - appends text at end of file
  * @filename: file name
- * @text_conted: text content
+ * @text_content: text content
  *
  * Return: 1 if true -1 if false
  */
