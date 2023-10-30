@@ -4,7 +4,7 @@
 #include <fcntl.h>
 
 /**
- * read_textfile- reads prints file
+ * read_textfile - reads and prints file
  * @filename: path to file
  * @letters: chars
  *
@@ -13,23 +13,23 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	ssize_t x;
-	int y;
-	char *holding;
+	int ret;
+	char *hold;
 
 	if (!filename)
 		return (0);
-	y = open(filename, O_RDONLY);
-	if (y == -1)
+	ret = open(filename, O_RDONLY);
+	if (ret == -1)
 		return (0);
-	holding = malloc(letters);
-	if (!holding)
+	hold = malloc(letters);
+	if (!hold)
 		return (0);
-	x = read(y, hilding, letters);
+	x = read(ret, hold, letters);
 	if (x == -1)
 		return (0);
-	x = write(STDOUT_FILENO, holding, x);
+	x = write(STDOUT_FILENO, hold, x);
 	if (x == -1)
 		return (0);
-	close(y);
+	close(ret);
 	return (x);
 }
