@@ -22,7 +22,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (y == -1)
 		return (0);
 	holding = malloc(letters);
-	if(!holding)
+	if (!holding)
 		return (0);
 	x = read(y, hilding, letters);
 	if (x == -1)
