@@ -33,6 +33,7 @@ char *create_buffer(char *file)
 void close_file(int fd)
 {
 	int x;
+
 	x = close(fd);
 
 	if (x == -1)
@@ -68,7 +69,7 @@ int main(int argc, char *argv[])
 	buffer = create_buffer(argv[2]);
 	from = open(argv[1], O_RDONLY);
 	reads = read(from, buffer, 1024);
-	to = open(argv[2], O_CREAT | OWRONLY |O_TRUNC, 0664);
+	to = open(argv[2], O_CREAT | OWRONLY | O_TRUNC, 0664);
 
 	do {
 		if (from == -1 || reads == -1)
