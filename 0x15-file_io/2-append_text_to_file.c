@@ -7,7 +7,7 @@
  *
  * Return: 1 if true or -1 if false
  */
-int append_text_to_file(const char *filename. char *text_content)
+int append_text_to_file(const char *filename, char *text_content)
 {
 	int result;
 	ssize_t x;
