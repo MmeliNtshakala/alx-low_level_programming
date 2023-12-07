@@ -8,7 +8,7 @@
 
 /**
  * struct double_lists - double linked lists
- * @int: integer
+ * @n: integer
  * @previous: points to previous node
  * @next: points to the next node
  *
@@ -17,9 +17,10 @@
 
 typedef struct double_lists
 {
+	int n;
 	struct double_lists *previous;
 	struct double_lists *next;
-}double_lists;
+}dlistint_t;
 
 size_t print_dlistint(const dlistint_t *h);
 size_t dlistint_len(const dlistint_t *h);
