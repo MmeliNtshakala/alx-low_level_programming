@@ -1,1 +1,1 @@
-HASH TABLES TASK
+Sorting algorithms
